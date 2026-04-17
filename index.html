@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Peppe.dev - Programmatore, editor e grafico. Sviluppo web, editing video e graphic design in un unico universo digitale.">
+    <title>Peppe.dev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="#home" class="nav-logo">PEPP<span>[E].dev</span></a>
+        <button class="nav-toggle" type="button" aria-label="Apri menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#chi-sono">PROFILO</a></li>
+            <li><a href="#servizi">SERVIZI</a></li>
+            <li><a href="#contatti">CONTATTI</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <h1>PEPPE.DEV</h1>
+        <p class="hero-subtitle">Programmazione logica, editing di precisione e design visivo d'impatto.</p>
+        <div class="hero-tags">
+            <div class="hero-tag prog"><i class="fas fa-code"></i> Programmatore</div>
+            <div class="hero-tag edit"><i class="fas fa-video"></i> Editor</div>
+            <div class="hero-tag graf"><i class="fas fa-paint-brush"></i> Grafico</div>
+        </div>
+        <a href="#servizi" class="btn-galaxy">ESPLORA</a>
+    </header>
+
+    <section id="chi-sono">
+        <div>
+            <div class="profile-container profile-media">
+                <img src="assets/img/profile-code.jpg" alt="immagine profilo Peppe.dev">
+            </div>
+        </div>
+        <div>
+            <h2 class="section-title profile-title">PROFILO</h2>
+            <p class="bio-text">
+                Sono <span class="bio-highlight">Peppe</span>, un professionista digitale a 360°. Non mi limito a scrivere codice, né solo a montare video o disegnare loghi: faccio tutto questo, integrandolo in un'unica visione.
+            </p>
+            <p class="bio-text">
+                Come <strong>Programmatore</strong>, costruisco piattaforme solide. Come <strong>Editor</strong>, do ritmo e narrazione ai contenuti. Come <strong>Grafico</strong>, curo l'estetica e l'impatto visivo. Lavoro su progetti ibridi per garantire che tecnica e creatività viaggino sulla stessa frequenza spaziale.
+            </p>
+        </div>
+    </section>
+
+    <section id="servizi">
+        <h2 class="section-title">Servizi offerti</h2>
+        <div class="galaxy-grid">
+            <div class="galaxy-card">
+                <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+                <h4>Sviluppo & Programmazione</h4>
+                <p>Architetture web custom, app e piattaforme. Scrivo codice pulito, performante e scalabile.</p>
+            </div>
+            <div class="galaxy-card">
+                <div class="card-icon"><i class="fas fa-film"></i></div>
+                <h4>Video & Photo Editing</h4>
+                <p>Montaggio video dinamico, color grading, post-produzione ed effetti visivi per social o corporate.</p>
+            </div>
+            <div class="galaxy-card">
+                <div class="card-icon"><i class="fas fa-palette"></i></div>
+                <h4>Graphic Design</h4>
+                <p>Costruzione dell'identità visiva: logotipi, UI/UX design, vettoriali e asset grafici completi.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contatti">
+        <div class="contact-container">
+            <h2 class="section-title">Contattami</h2>
+            <p class="contact-subtitle">
+                Sviluppo, grafica o editing? Seleziona il servizio e raccontami il tuo progetto.
+            </p>
+
+            <form class="contact-form" id="contactForm" novalidate>
+                <div class="form-row">
+                    <input type="text" name="nome" placeholder="Nome completo" required>
+                    <input type="email" name="email" placeholder="Indirizzo email" required>
+                </div>
+
+                <div class="custom-select-wrapper">
+                    <div class="custom-select" id="customSelect" tabindex="0" role="button" aria-haspopup="listbox" aria-expanded="false">Servizio richiesto...</div>
+                    <div class="custom-options" id="customOptions" role="listbox">
+                        <div class="custom-option" data-value="programmazione" role="option">Sviluppo Web / Software (Programmatore)</div>
+                        <div class="custom-option" data-value="editing" role="option">Montaggio Video / Post-Produzione (Editor)</div>
+                        <div class="custom-option" data-value="grafica" role="option">Brand Identity / UI/UX (Grafico)</div>
+                        <div class="custom-option" data-value="ibrido" role="option">Progetto a 360° (Programmazione + Design)</div>
+                    </div>
+                    <input type="hidden" name="servizio" id="servizioInput" required>
+                </div>
+
+                <textarea name="messaggio" rows="6" placeholder="Descrivi brevemente di cosa hai bisogno..." required></textarea>
+                <button type="submit" id="submitButton">INVIA RICHIESTA</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="toast" id="toast"></div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://instagram.com/cacciatoree_10" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://tiktok.com/@27.peppe" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i> TikTok</a>
+        </div>
+        <p>&copy; 2026 Peppe.dev. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
