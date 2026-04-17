@@ -1,0 +1,8 @@
+PORT=4000
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_SECURE=false
+SMTP_USER=rosycacciatore998@gmail.com
+SMTP_PASS=cafd oscs whnf mbbh
+MAIL_FROM=rosycacciatore998@gmail.com
+MAIL_TO=js.peppe.css.programmator.html@gmail.com
