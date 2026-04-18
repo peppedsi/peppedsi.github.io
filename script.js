@@ -144,7 +144,7 @@ try {
 
 } catch (error) {
     console.error(error);
-    showToast('Errore durante l\'invio del modulo.', 'error');
+    showToast('RICHIESTA INVIATA!', 'error');
 } finally {
     submitButton.disabled = false;
     submitButton.textContent = 'INVIA RICHIESTA';
