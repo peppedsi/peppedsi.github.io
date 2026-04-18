@@ -124,7 +124,10 @@ form.addEventListener('submit', async (e) => {
     submitButton.textContent = 'INVIO IN CORSO...';
 
     try {
-        const response = await fetch('/api/contact', {
+        const response = await fetch('https://formspree.io/f/xrerqrbl', {
+    method: 'POST',
+    body: formData
+});
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
