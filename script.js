@@ -120,37 +120,33 @@ form.addEventListener('submit', async (e) => {
         return;
     }
 
+
     submitButton.disabled = true;
-    submitButton.textContent = 'INVIO IN CORSO...';
+submitButton.textContent = 'INVIO IN CORSO...';
 
-    try {
-        const response = await fetch('https://formspree.io/f/xrerqrbl', {
-    method: 'POST',
-    body: formData
-});
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(payload)
-        });
+try {
+    const response = await fetch('https://formspree.io/f/xrerqrbl', {
+        method: 'POST',
+        body: formData
+    });
 
-
-        if (!response.ok || !result.success) {
-            throw new Error(result.message || 'Invio non riuscito');
-        }
-
-        form.reset();
-        hiddenInput.value = '';
-        select.innerText = 'Servizio richiesto...';
-        select.style.color = 'var(--text-secondary)';
-        options.forEach((item) => item.classList.remove('selected'));
-        showToast('Richiesta inviata correttamente. Controlla la tua casella o attendi la mia risposta.', 'success');
-    } catch (error) {
-        console.error(error);
-        showToast('Errore durante l\'invio del modulo. Controlla il backend e le credenziali email.', 'error');
-    } finally {
-        submitButton.disabled = false;
-        submitButton.textContent = 'INVIA RICHIESTA';
+    if (!response.ok) {
+        throw new Error('Invio non riuscito');
     }
+
+    form.reset();
+    hiddenInput.value = '';
+    select.innerText = 'Servizio richiesto...';
+    select.style.color = 'var(--text-secondary)';
+    options.forEach((item) => item.classList.remove('selected'));
+
+    showToast('Richiesta inviata correttamente. Controlla la tua casella o attendi la mia risposta.', 'success');
+
+} catch (error) {
+    console.error(error);
+    showToast('Errore durante l\'invio del modulo.', 'error');
+} finally {
+    submitButton.disabled = false;
+    submitButton.textContent = 'INVIA RICHIESTA';
+}
 });
