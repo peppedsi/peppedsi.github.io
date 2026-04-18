@@ -135,7 +135,6 @@ form.addEventListener('submit', async (e) => {
             body: JSON.stringify(payload)
         });
 
-        const result = await response.json();
 
         if (!response.ok || !result.success) {
             throw new Error(result.message || 'Invio non riuscito');
