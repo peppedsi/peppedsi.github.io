@@ -144,7 +144,7 @@ try {
 
 } catch (error) {
     console.error(error);
-    showToast('RICHIESTA INVIATA!', 'error');
+    showToast('Richiesta inviata correttamente!', 'error');
 } finally {
     submitButton.disabled = false;
     submitButton.textContent = 'INVIA RICHIESTA';
